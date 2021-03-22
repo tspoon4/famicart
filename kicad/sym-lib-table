@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name famisymbol)(type Legacy)(uri ${KIPRJMOD}/famisymbol.lib)(options "")(descr ""))
+)
