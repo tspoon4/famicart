@@ -5,8 +5,8 @@
 # Pictures
 Images | Images
 ------ | ------
-![Breadboard](images/famicart_brb.jpg?raw=true) | ![PCB](images/famicart_pcb.jpg?raw=true)
-![Soldering](images/famicart_sld.jpg?raw=true) | ![Final](images/famicart_fnl.jpg?raw=true)
+![](images/famicart_brb.jpg?raw=true) | ![](images/famicart_pcb.jpg?raw=true)
+![](images/famicart_sld.jpg?raw=true) | ![](images/famicart_fnl.jpg?raw=true)
 
 # Components
 Reference | Quantity
