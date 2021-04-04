@@ -1,7 +1,7 @@
 # Overview
 A while ago, I bought a Famicom in Japan with a bunch of game carts (including Super Mario and Zelda!)
 As a programmer, I always had in mind to run my own program on it and play with this amazing hardware.
-As a beginner in electronics, designing a develpment cartridge would be an good opportunity to learn.
+As a beginner in electronics, designing a development cartridge would be an good opportunity to learn.
 
 After a bit of googling, I found the Nesdev community and their extensive [knowledge base](http://wiki.nesdev.com/w/index.php/Nesdev_Wiki). For this learning project, I wanted to design the board from scratch by choosing myself the components and re-discovering the boolean logic to connect them.
 
@@ -53,6 +53,7 @@ CR2032 Holder | 1
 When disabling CIRAM the CHR-RAM is always enabled because:
 * CHR-RAM /CE1 is connected to GND
 * CHR-RAM CE2 is connected to VCC
+
 CHR-RAM read/write technically mirrors Palette RAM indices but this has not been extensively tested.
 ### Component packing
 Packing is loose and PCB surface use can be improved to reduce costs and fit in a cartrige package.
