@@ -1,11 +1,12 @@
 # Overview
-A while ago, I bought a Famicom in Japan with a bunch of game carts (including Super Mario and Zelda!)
+A while ago, I bought a Famicom in Japan with a bunch of game carts (including Super Mario Bros. 3 and The Legend of Zelda 1!).
+
 As a programmer, I always had in mind to run my own program on it and play with this amazing hardware.
-As a beginner in electronics, designing a development cartridge would be an good opportunity to learn.
+As a beginner in electronics, designing a development cartridge would be an great opportunity to learn.
 
-After a bit of googling, I found the Nesdev community and their extensive [knowledge base](http://wiki.nesdev.com/w/index.php/Nesdev_Wiki). For this learning project, I wanted to design the board from scratch by choosing myself the components and re-discovering the boolean logic to connect them.
+After a bit of googling, I found the Nesdev community and their extensive [knowledge base](http://wiki.nesdev.com/w/index.php/Nesdev_Wiki). For this learning project, I wanted to design the board from scratch by choosing myself the components and discovering the boolean logic to connect them.
 
-I enjoyed studing the various IC datasheets and playing with the Arduino to prototype the PRG-ROM Flasher.
+I enjoyed studying the various IC datasheets and playing with the Arduino to prototype the PRG-ROM Flasher.
 Please note that this project is not optimized for cost and is not a professional development platform.
 
 # Features
@@ -15,7 +16,7 @@ Please note that this project is not optimized for cost and is not a professiona
 * Simple discrete logic mapper using an 8bit write-only register at address $8000
 	* Bit 0-3: PRG-ROM 32KiB bank selection (2^4 = 16)
 	* Bit 4-6: PRG-RAM 8KiB bank selection (2^3 = 8)
-	* Bit 7: Software mirorring control (horizontal, vertical)
+	* Bit 7: Software mirroring control (horizontal, vertical)
 * CHR-RAM memory mapping customization with 2 jumpers
 	* Jumper J2: CIRAM enable/disable
 	* Jumper J3: Software controlled mirroring/single-screen
@@ -30,23 +31,23 @@ Images | Images
 
 # Production
 To produce the PCB that will fit in the Famicom cartridge slot, you will have to provide to the manufacturer the 2 following items:
-* The PCB thickness should be **1.2mm**
+* Information that the PCB thickness should be **1.2mm**
 * The Gerber files for the different PCB layers from this [location](gerber/)
 
 # Components
-Reference | Quantity
---------- | --------
-Resistor 1k | 1
-Resistor 10k | 1
-Diode 1N4148 | 2
-Capacitor 100nF | 7
-Nand 74HC00 | 2
-Nor 74HC02 | 1
-Latch 74HC573 | 1
-Flash SST39SF040 | 1
-SRAM uPD431000A | 2
-Conn 3pins | 2
-CR2032 Holder | 1
+Reference | Quantity | Purpose
+--------- | -------- | -------
+Resistor 1k | 1 | Battery charge protection
+Resistor 10k | 1 | Pull down for PRG-RAM
+Diode 1N4148 | 2 | Or PRG-RAM power supply
+Capacitor 100nF | 7 | Decoupling
+Nand 74HC00 | 2 | Decoding PRG R/W signals and misc logic
+Nor 74HC02 | 1 | Software controlled mirroring logic
+Latch 74HC573 | 1 | Mapper register
+Flash SST39SF040 | 1 | PRG-ROM chip
+SRAM uPD431000A-70LL | 2 | PRG-RAM and CHR-RAM chip
+Conn 3pins | 2 | CHR-RAM jumpers
+CR2032 Holder | 1 | 3V battery case
 
 # Potential improvements
 ### Palette RAM bus conflict when disabling CIRAM
@@ -56,7 +57,7 @@ When disabling CIRAM the CHR-RAM is always enabled because:
 
 CHR-RAM read/write technically mirrors Palette RAM indices but this has not been extensively tested.
 ### Component packing
-Packing is loose and PCB surface use can be improved to reduce costs and fit in a cartrige package.
+Packing is loose and PCB surface use can be improved to reduce costs and fit in a cartridge case.
 Vias close to the cartridge connectors might be saved by leveraging memory chip pads.
 ### CHR-RAM banks instead of PRG-RAM
 I've made the choice to implement banking on PRG-RAM instead of CHR-RAM.
