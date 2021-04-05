@@ -22,6 +22,7 @@ Please note that this project is not optimized for cost and is not a professiona
 	* Jumper J3: Software controlled mirroring/single-screen
 * Arduino Uno/Nano PRG-ROM programmer is available at this [location](flash/)
 * KiCad source files for modification are available at this [location](kicad/)
+* PDF exports for quick review are available at this [location](pdf/)
 
 # Pictures
 Images | Images
