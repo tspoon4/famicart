@@ -28,7 +28,7 @@ Then in order to write the SST chip, start by erasing it and then send the comma
 # Pictures
 Image | Image | Image
 ----- | ----- | -----
-![](../images/flash_ardy.jpg?raw=true) | ![](images/flash_front.jpg?raw=true) | ![](../images/flash_back.jpg?raw=true)
+![](../images/flash_ardy.jpg?raw=true) | ![](../images/flash_front.jpg?raw=true) | ![](../images/flash_back.jpg?raw=true)
 
 # Components
 Reference | Quantity | Purpose
